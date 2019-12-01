@@ -55,6 +55,7 @@ public class TestMain2 {
         }).start();
 ```
 是的，就这么一句。看一个结果
+
 ![](https://raw.githubusercontent.com/Lyn4ever29/img/master/picgo20191130153628.png)
  
 ### 二、函数式接口
@@ -97,6 +98,7 @@ public interface MyFunction {
         System.out.println(myFunction1.getUpperCase("this is MyFunctoinTest"));
     }
 ```
+
 ![](https://raw.githubusercontent.com/Lyn4ever29/img/master/picgo20191130160122.png)
 
 可以看到，我们定义的这个MyFunction接口并没有什么用，因为具体的实现是在匿名内部类中写的。
@@ -121,6 +123,7 @@ java.lang.FileFilter
         System.out.println(predicate.test(12));
 ```
 可以看一个Predicate的源代码
+
 ![](https://raw.githubusercontent.com/Lyn4ever29/img/master/picgo20191130160708.png)
 
 代码的结果肯定是false，不用看了。这个接口就可以满足我们的需求，只要我们想要``` 接收一个对象T,返回一个boolean类型结果```这样的功能，完全不用单独定义方法，只要用这个类就可以了。
@@ -190,8 +193,6 @@ interface HasResultHasParam {
     int test(int x, int y);
 }
 ```
-
-
 
 
 
