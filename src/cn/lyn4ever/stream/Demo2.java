@@ -54,7 +54,6 @@ public class Demo2 {
 
         long e = System.currentTimeMillis();
         System.out.println("使用Stream操作的耗时是：" + (e - s) + "ms");
-        wirteToFile(e-s,"stream");
         return list1;
     }
 
@@ -75,20 +74,8 @@ public class Demo2 {
 
         long e = System.currentTimeMillis();
         System.out.println("使用常规操作的耗时是：" + (e - s) + "ms");
-        wirteToFile(e-s,"normal");
         return list1;
     }
 
 
-    private static void wirteToFile(long time, String file) {
-        try (Writer writer = new BufferedWriter(new FileWriter("d://" + file + ".txt",true))) {
-            writer.write(String.valueOf(time));
-            writer.write("\n");
-            writer.flush();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-    }
 }
